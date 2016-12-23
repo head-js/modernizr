@@ -1,0 +1,20 @@
+{
+  "name": "h5-modernizr",
+  "version": "0.0.2",
+  "description": "h5-modernizr",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hbrls/h5-modernizr.git"
+  },
+  "author": "Albert<shuaizhexu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hbrls/h5-modernizr/issues"
+  },
+  "homepage": "https://github.com/hbrls/h5-modernizr#readme",
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-concat": "2.6.1"
+  }
+}
