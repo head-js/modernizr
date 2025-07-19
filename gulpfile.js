@@ -1,14 +1,16 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
+import fs from 'fs-extra';
+import gulp from 'gulp';
+import modernizr from 'modernizr';
+import config from './config.js';
 
 
-gulp.task('bundle', function () {
-  return gulp
-    .src([
-      'src/_head.js',
-      'src/network.js',
-      'src/screen.js',
-    ])
-    .pipe(concat('index.js'))
-    .pipe(gulp.dest('./lib'));
+gulp.task('modernizr', function(done) {
+  modernizr.build(config, function(output) {
+    fs.outputFile('dist/modernizr.js', output).then(() => {
+      done();
+    })
+  });
 });
+
+
+gulp.task('default', gulp.series('modernizr'));
